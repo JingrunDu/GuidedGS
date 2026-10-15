@@ -1,0 +1,11 @@
+{
+  "groups": {
+    "pss_sigma": {"experiment": "C1", "parameter": "curriculum_sigma", "values": [0, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 5.0], "runs": ["C0", "pss_sigma_1.0", "pss_sigma_1.5", "pss_sigma_2.0", "pss_sigma_2.5", "C1", "pss_sigma_3.5", "pss_sigma_5.0"]},
+    "iabg_growth": {"experiment": "C2", "parameter": "growth_rate", "values": [0.010, 0.013, 0.015, 0.017, 0.020, 0.030], "runs": ["iabg_growth_0.010", "iabg_growth_0.013", "C2", "iabg_growth_0.017", "iabg_growth_0.020", "iabg_growth_0.030"]},
+    "iabg_decay": {"experiment": "C2", "parameter": "growth_decay", "values": [0.0, 0.5, 1.0], "runs": ["iabg_decay_0.0", "iabg_decay_0.5", "C2"]},
+    "varp_budget": {"experiment": "C3", "parameter": "redundancy_budget_frac", "values": [0, 0.25, 0.50, 0.75], "runs": ["C0", "varp_budget_0.25", "C3", "varp_budget_0.75"]},
+    "varp_importance": {"experiment": "C3", "parameter": "redundancy_thresh", "values": [1.0, 2.0, 3.0], "runs": ["varp_importance_1.0", "C3", "varp_importance_3.0"]},
+    "varp_opacity": {"experiment": "C3", "parameter": "redundancy_opacity", "values": [0.02, 0.05, 0.10], "runs": ["varp_opacity_0.02", "C3", "varp_opacity_0.10"]},
+    "varp_visibility": {"experiment": "C3", "parameter": "redundancy_vis_mult", "values": [1.0, 1.5, 2.0], "runs": ["varp_visibility_1.0", "C3", "varp_visibility_2.0"]}
+  }
+}

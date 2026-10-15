@@ -1,0 +1,61 @@
+{
+  "default": "C7",
+  "num_images": 6650,
+  "train_images": 5985,
+  "test_images": 665,
+  "initial_cloud_sha256": "6a6724925440d344b8b6b331ceff1dd7db03b5e81020d0beb59bc2e8ee924e18",
+  "parameters": {
+    "iterations": 665000,
+    "resolution": 1,
+    "eval": true,
+    "llffhold": 0,
+    "data_device": "cpu",
+    "seed": 0,
+    "test_iterations": [-1],
+    "save_iterations": [665000],
+    "densification_interval": 2216,
+    "densify_from_iter": 6650,
+    "densify_until_iter": 332500,
+    "opacity_reset_interval": 99750,
+    "densify_grad_threshold": 0.0002,
+    "grad_abs_thresh": 0.0003,
+    "opacity_lr": 0.025,
+    "highfeature_lr": 0.025,
+    "percent_dense": 0.003,
+    "lambda_dssim": 0.4,
+    "mult": 0.6,
+    "loss_thresh": 0.05
+  },
+  "modules": {
+    "PSS": {
+      "curriculum_sigma": 3.0,
+      "curriculum_T1": 49875,
+      "curriculum_T2": 266000,
+      "curriculum_schedule": "linear"
+    },
+    "IABG": {
+      "use_budgeted_growth": true,
+      "growth_rate": 0.015,
+      "growth_decay": 1.0,
+      "growth_combine_prune": 0.0
+    },
+    "VARP": {
+      "use_redundancy_prune": true,
+      "redundancy_thresh": 2.0,
+      "redundancy_opacity": 0.05,
+      "redundancy_vis_mult": 1.5,
+      "redundancy_budget_frac": 0.5,
+      "redundancy_start_iter": 49875
+    }
+  },
+  "ablations": {
+    "C0": [],
+    "C1": ["PSS"],
+    "C2": ["IABG"],
+    "C3": ["VARP"],
+    "C4": ["PSS", "IABG"],
+    "C5": ["PSS", "VARP"],
+    "C6": ["IABG", "VARP"],
+    "C7": ["PSS", "IABG", "VARP"]
+  }
+}
